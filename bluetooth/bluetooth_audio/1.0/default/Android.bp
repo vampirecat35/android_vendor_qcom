@@ -1,0 +1,28 @@
+// ANDROIDMK TRANSLATION ERROR: unsupported conditional
+// ifeq ($(TARGET_HAS_SPLIT_A2DP_FEATURE),true)
+
+cc_library_shared {
+    name: "com.qualcomm.qti.bluetooth_audio@1.0",
+    relative_install_path: "hw",
+//  proprietary: true,
+    vendor_available: true,
+
+    srcs: ["BluetoothAudio.cpp"],
+
+    shared_libs: [
+        "libhidlbase",
+
+        "libutils",
+        "liblog",
+
+        "libbase",
+        "libcutils",
+        "libhardware",
+//      "com.qualcomm.qti.bluetooth_audio@1.0",
+    ],
+
+}
+
+// ANDROIDMK TRANSLATION ERROR: endif from unsupported conditional
+// endif
+// TARGET_HAS_SPLIT_A2DP_FEATURE

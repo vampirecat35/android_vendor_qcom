@@ -1,0 +1,23 @@
+//ifeq ($(BOARD_HAVE_BLUETOOTH),true)
+
+cc_binary {
+    name: "btconfig",
+
+    cflags: ["-Wno-unused-variable"] + ["-Wno-sometimes-uninitialized"] + ["-Wno-format"],
+
+    include_dirs: ["packages/modules/Bluetooth/system/hci/include"],
+
+    srcs: ["btconfig.c"],
+
+    shared_libs: [
+        "libcutils",
+        "libutils",
+        "libdl",
+    ],
+
+    sanitize: {
+        misc_undefined: ["integer_overflow"],
+    },
+}
+
+//endif
