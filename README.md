@@ -1,2 +1,3 @@
 # android_vendor_qcom
-Android qcom vendor
+Android qcom vendor files
+
